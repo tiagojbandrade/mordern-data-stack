@@ -4,10 +4,11 @@ from datetime import datetime
 
 @dag(
         dag_id="pipeline", 
-        description="minha pipeline no airflow"
+        description="minha pipeline no airflow",
         schedule="0 0 1 * *", 
         start_date=datetime(2024, 11, 1), 
-        catchup=False)
+        catchup=False
+)
 def pipeline():
 
     @task
